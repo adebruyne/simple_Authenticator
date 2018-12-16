@@ -12,12 +12,9 @@ def auth_user(username, password, user_array)
     user_array.each do |user_record|
         if user_record[:username] == username && user_record[:password] == password
             return user_record
-        
-        else
-            return "Credentials were not correct"
-        end
+         end
     end
-
+"Credentials were not correct"
 end
 
 
@@ -49,3 +46,4 @@ while attempts < 4
 
 
 end
+puts "You have exceeded the number of attempts" if attempts == 4
